@@ -11,8 +11,9 @@ while (true) {
   const input = prompt('enter something');
 
   if (input === null) {
-    break;
+    break; 
   }
+  console.log(input);
 
   if (input.length < 5) {
     shortStrings = shortStrings + '\n- "' + input + '"';
@@ -22,5 +23,6 @@ while (true) {
     longStrings = longStrings + '\n- "' + input + '"';
   }
 }
+console.log(longStrings);
 
 alert(shortStrings + '\n\n' + mediumStrings + '\n\n' + longStrings);

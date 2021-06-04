@@ -2,23 +2,27 @@
 
 
 /*
-  environment:
+  environment: Firefox
 
-  name:
-  message:
+  name: Uncaught SyntaxError
+  message: label not found
 
-  callstack:
+  callstack: <anonymous> about:blank line 56 > injectedScript:2
+    onload http://localhost:4002/own_static_resources_lenses/study/static/types/javascript/static/study-with.js:56
+    studyWithEval http://localhost:4002/own_static_resources_lenses/study/static/types/javascript/static/study-with.js:33
+    studyWith http://localhost:4002/own_static_resources_lenses/study/static/types/javascript/javascript-class.js:462
+    initJsUi http://localhost:4002/own_static_resources_lenses/study/static/types/javascript/javascript-class.js:289
 
-  life cycle:
+  life cycle: creation
 
-  the mistake:
+  the mistake: there is neither a condition nor a loop for a break 
 
-  the fix(es):
+  the fix(es): 'break' should be deleted
 */
 
 
 const add = (x = 0, y = 0) => {
-  break x + y;
+x + y;
 };
 
 const seven = add(3, 4);

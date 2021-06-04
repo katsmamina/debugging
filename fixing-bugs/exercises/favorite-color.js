@@ -12,10 +12,11 @@
     'hi' -> 'you entered "hi"'
     'JavaScript' -> 'you entered "JavaScript"'
 
-  the bug:
+  the bug: input shouldn't be neither empty nor null. The alert message should include the message part
 
-  your fix:
-
+  your fix: 
+  - line 26: input !== null, input.length !== 0
+  - line 28% message = message + input + '"'
 */
 
 let message = 'you entered "';
@@ -23,8 +24,8 @@ let message = 'you entered "';
 while (true) {
   const input = prompt('enter something');
 
-  if (input === null && input.length === 0) {
-    message = input + '"';
+  if (input !== null && input.length !== 0) {
+    message = message + input + '"';
     break;
   }
 }

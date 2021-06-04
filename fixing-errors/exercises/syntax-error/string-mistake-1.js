@@ -15,5 +15,4 @@
   the fix(es):
 */
 
-const a = 'this is
-two lines';
+const a = 'this is two lines';
