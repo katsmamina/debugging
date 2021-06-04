@@ -22,8 +22,12 @@ blank line 56 > injectedScript line 2 > eval:20:20
   the fix(es): changed number to string : '12'
 */
 
+<<<<<<< HEAD
 const max = '12';
+=======
+const maxNumber = 6;
+>>>>>>> c6ce0595ea3492d7c8575a87488949f447b1e139
 
-for (const step of max) {
-  console.log(step);
+for (const i of maxNumber) {
+  console.log(i); // 0, 1, 2, 3, 4, 5
 }

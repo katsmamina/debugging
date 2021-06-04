@@ -27,7 +27,7 @@ while (!userConfirmedQuery) {
   console.log(userConfirmedQuery);
 }
 
-let phraseIncludesQuery = false;
+let phraseIncludesQuery;
 if (caseSensitive) {
   phraseIncludesQuery = phrase.includes(query);
   console.log(phraseIncludesQuery);

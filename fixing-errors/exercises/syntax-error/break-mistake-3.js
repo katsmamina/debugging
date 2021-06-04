@@ -28,4 +28,9 @@ if (iterations > 8) {
     break;
   }
 }
+<<<<<<< HEAD
 console.log(iterations);
+=======
+
+console.assert(iterations === 9);
+>>>>>>> c6ce0595ea3492d7c8575a87488949f447b1e139

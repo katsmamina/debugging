@@ -39,5 +39,11 @@ if (randomFrom1To3 === 1) {
 }
 
 /* -- BEGIN: check if the user was correct and let them know -- */
+let result
+const userCorrect = correctAnswer == attempt
 
+? result = 'Correct! the phrase was ' + correctAnswer
+: result = 'Nope'
+
+alert (result)
 /* -- END: check if the user was correct and let them know -- */

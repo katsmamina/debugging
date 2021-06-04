@@ -4,7 +4,6 @@
 
   - using the wrong variable name
   - checking different random numbers instead of the same one
-
 */
 
 const instructions =
@@ -14,37 +13,37 @@ const instructions =
   'if you enter it exactly, you win!';
 alert(instructions);
 
-let input1 = null;
-let input2 = null;
-let input3 = null;
+let input1 = prompt;
+let input2 = prompt;
+let input3 = prompt;
 
-while (input1 !== '' && input1 !== null) {
+if (input1 !== '' && input1 !== null) {
   input1 = prompt('enter your first secret phrase:');
 }
-while (input1 !== '' && input1 !== null) {
+if (input2 !== '' && input2 !== null) {
   input2 = prompt('enter your second secret phrase:');
 }
-while (input1 !== '' && input1 !== null) {
+if (input3 !== '' && input3 !== null) {
   input3 = prompt('enter your third secret phrase:');
 }
 
 alert('all saved! get ready to remember');
 
 const randomFrom1To3 = Math.ceil(Math.random() * 3);
-const userGuess = prompt('enter phrase number ', randomFrom1To3);
+const userGuess = prompt('enter phrase number ' + randomFrom1To3);
 
 let phraseToGuess = '';
-if (Math.ceil(Math.random() * 3) === 1) {
-  phraseToGuess = option1;
-} else if (Math.ceil(Math.random() * 3) === 2) {
-  phraseToGuess = option1;
-} else if (Math.ceil(Math.random() * 3) === 3) {
-  phraseToGuess = option1;
+if (randomFrom1To3 === 1) {
+  phraseToGuess = input1;
+} else if (randomFrom1To3 === 2) {
+  phraseToGuess = input2;
+} else if (randomFrom1To3 === 3) {
+  phraseToGuess = input3;
 }
 
-const guessIsCorrect = phraseToGuess === userGuess;
+const guessIsCorrect = phraseToGuess === userGuess
 
-const gameResult = guessMessage
+// const gameResult = guessMessage
   ? 'correct! phrase ' + randomFrom1To3 + ' was "' + phraseToGuess + '"'
   : 'nope :(';
 

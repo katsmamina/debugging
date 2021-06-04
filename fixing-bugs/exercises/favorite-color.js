@@ -12,7 +12,20 @@
     'hi' -> 'you entered "hi"'
     'JavaScript' -> 'you entered "JavaScript"'
 
+<<<<<<< HEAD
   the bug: input shouldn't be neither empty nor null. The alert message should include the message part
+=======
+  --- experiments ---
+
+  1. FAILING:
+    TRY:
+    PREDICT:
+    IT DID:
+    EXPLAIN:
+
+  --- lessons learned ---
+
+>>>>>>> c6ce0595ea3492d7c8575a87488949f447b1e139
 
   your fix: 
   - line 26: input !== null, input.length !== 0
@@ -31,12 +44,3 @@ while (true) {
 }
 
 alert(message);
-
-/* experiments
-
-  name:
-    predict:
-    actual:
-    why:
-
-*/
