@@ -16,10 +16,10 @@
 
   --- experiments ---
 
-  1. FAILING:
-    TRY:
-    PREDICT:
-    IT DID:
+  1. FAILING: is NOT excited with ! and is excited when there's no !
+    TRY: boolean problem? no. changed 
+    PREDICT: the program will work properly
+    IT DID: work properly
     EXPLAIN:
 
   --- lessons learned ---
@@ -36,7 +36,7 @@ while (input === null) {
 
 let isExcited = false;
 for (const char of input) {
-  if (char !== '!') {
+  if (char === '!') { // changed !== to === . as ! needs to be included 
     isExcited = true;
     break;
   }

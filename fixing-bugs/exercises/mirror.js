@@ -32,7 +32,7 @@ while (text === null) {
 
 let mirrored = '|';
 for (const character of text) {
-  mirrored = mirrored + character + mirrored;
+  mirrored = character + mirrored + character; // changed from mirr + char + mirr, there was too much mirrored sign
 }
 
 alert(mirrored);

@@ -11,17 +11,25 @@
 let validInput = '';
 let isValid = false;
 while (!isValid) {
-  const userInput = prompt('enter anything with "e" or "E" as the 5th letter');
+  
+  let userInput = prompt('enter anything with "e" or "E" as the 5th letter');
 
-  if ((userInput = null || userInput === '')) {
+  if (userInput === null || userInput === '') { // removed extra scopes, changed = to === (comparison vs. assignment)
     alert('that is nothing');
-  } else if (userInput.length > 5) {
+  } 
+  
+  else if (userInput.length < 5) { // changed > to <
     alert('too short');
-  } else if (userInput[5] === 'e' && userInput[5] === 'E') {
-    validInput = userInput;
-  } else {
+  } 
+  
+  else if (userInput[4] !== 'e' && userInput[4] !== 'E') { // changed 5 to 4, changed === to !==
     alert('input has no "e" or "E" as the 5th character');
+    // changed to reversed boolean value
+  
+  } else {
+    validInput = userInput; // WHY DO WE NEED TO DO THIS
+    isValid = true
   }
 }
 
-alert('done: "' + validInput + '"');
+alert('done: "' + validInput + '"'); // WHY CAN'T WE JUST USE USERINPUT, the console drops a mistake

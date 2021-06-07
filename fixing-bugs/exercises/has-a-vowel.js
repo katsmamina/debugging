@@ -16,8 +16,8 @@
 
   --- experiments ---
 
-  1. FAILING:
-    TRY:
+  1. FAILING: shows no vowels when there is one and shows vowels when there's none
+    TRY: problem with boolean, changed true and false ()
     PREDICT:
     IT DID:
     EXPLAIN:
@@ -34,10 +34,10 @@ while (characters === null) {
 
 const vowels = 'aeiouAEIOU';
 
-let hasAVowel = true;
+let hasAVowel = false; // changed true to false
 for (const char of characters) {
   if (vowels.includes(char)) {
-    hasAVowel = false;
+    hasAVowel = true; // changed false to true
     break;
   }
 }

@@ -9,17 +9,17 @@
 
 */
 
-const userInput = '';
-const isLongEnough = false;
-while (isLongEnough) {
+let userInput = ''; // const => let
+let isLongEnough = false; // const => let
+while (!isLongEnough) { //  added ! 
   userInput = prompt('enter anything longer than 5 characters');
 
-  if (userInput !== null || userInput !== '') {
+  if (userInput === null || userInput === '') { // !== to ===
     alert('that is nothing');
-  } else if ((userInput.length = 5)) {
+  } else if (userInput.length <= 5) { // shorter or equal to 5
     alert('too short');
   } else {
-    isLongEnough === true;
+    isLongEnough = true; // not === but = !!! isLongenough should not be FULLY equal to true
   }
 }
 

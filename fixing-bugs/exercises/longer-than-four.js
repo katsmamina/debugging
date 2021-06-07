@@ -30,13 +30,14 @@ let input = '';
 
 let prompting = true;
 while (prompting) {
-  let input = prompt(
+  input = prompt( // removed let, no need to declare the same variable twice
     'enter something longer than 4 characters, or "cancel" to leave'
   );
   if (input === null) {
     prompting = false;
     input = 'you canceled';
-  } else if (input > 4) {
+
+  } else if (input.length > 4) { // added length
     prompting = false;
   }
 }

@@ -10,17 +10,22 @@
 
 let userInput = '';
 let userConfirmed = false;
-while (userConfirmed) {
+while (!userConfirmed) { // changed === to !==
   userInput = prompt('enter your name:');
   console.log('userInput:', typeof userInput, userInput);
 
-  if (userInput === false) {
+  if (userInput === null || userInput === '') { // changed condition
     alert('nothing is not a name');
     continue;
   }
 
-  const confirmMessage = 'is this correct?\n"' + userInput + '"';
-  userConfirmed = alert(confirmMessage);
+  const confirmMessage = confirm ('is this correct?\n"' + userInput + '"'); // added type confirm
+  // userConfirmed = confirm(confirmMessage);
+
+  if (confirmMessage === true) {
+    userConfirmed === true;
+    break; // added condition and break
+  }
 }
 
 const finalMessage = `your name is: "${userInput}"`;
