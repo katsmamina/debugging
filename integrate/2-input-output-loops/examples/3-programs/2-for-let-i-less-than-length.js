@@ -23,7 +23,7 @@ while (!userConfirmed) {
   userConfirmed = confirm(confirmMessage);
 }
 
-for (let i = 0; i < userInput.length; i++) {
+for (let i = 0; i < userInput.length; i++) { // for loop! 
   const nextLetter = userInput[i];
   alert('"' + nextLetter + '"');
 }

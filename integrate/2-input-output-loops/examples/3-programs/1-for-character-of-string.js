@@ -27,6 +27,6 @@ while (!userConfirmed) {
 }
 
 
-for (const character of userInput) {
+for (const character of userInput) { // for each character !
   alert('"' + character + '"');
 }

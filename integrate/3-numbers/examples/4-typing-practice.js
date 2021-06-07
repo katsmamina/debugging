@@ -51,7 +51,7 @@ while (roundNumber !== repetitions) {
   const userInput = prompt('practice round ' + roundNumber + ':');
 
   if (userInput === null || userInput === '') {
-    alert('there is not canceling!');
+    alert('there is no canceling!');
     continue;
   }
 

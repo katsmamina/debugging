@@ -9,39 +9,39 @@
 
 let userInput = '';
 let userConfirmed = false;
-while (_) {
+while (!userConfirmed) {
   userInput = prompt('enter a word to filter:');
 
   if (userInput === '' || userInput === null) {
     alert('nope, enter something');
-    continue;
+    // continue;
   }
 
-  const whiteSpaceRegex = new RegExp('\\s', 'g');
-  if (whiteSpaceRegex._(userInput)) {
+  const whiteSpaceRegex = new RegExp('\\s', 'g'); //   https://javascript.ru/REGexp . \s – whitespace. DO NOT FULLY UNDERSTAND! WHY 'g'??
+  if (whiteSpaceRegex.test(userInput)) { // need to remember TEST 
     alert("words can't have white space");
     continue;
   }
 
   const confirmMessage =
     'do you want to filter this word?\n\n' + '- "' + userInput + '"';
-  _ = confirm(confirmMessage);
+   userConfirmed = confirm(confirmMessage);
 }
 
-const removeVowels = confirm(`what would you like to remove from "${_}"?
+const removeVowels = confirm(`what would you like to remove from "${userInput}"?
 - ok: vowels
 - cancel: consonants
 `);
 
-const toRemove = removeVowels ? '_' : '_';
+const toRemove = removeVowels ? 'aeiou' : 'bcdfghjklmnpqrstvwxyz'; // ternary operator, another way of writing condition
 
 let filteredInput = '';
 for (const character of userInput) {
   const lowerCaseCharacter = character.toLowerCase();
-  if (_) {
-    _;
+  if (toRemove.includes(lowerCaseCharacter)) {
+    filteredInput = userInput;
   }
 }
 
-const finalMessage = `"${userInput}" -> "${filteredInput}"`;
+const finalMessage = `"${userInput}" -> "${filteredInput}"`; // ${} – for 
 alert(finalMessage);

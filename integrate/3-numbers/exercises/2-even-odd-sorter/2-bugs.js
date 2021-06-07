@@ -4,21 +4,21 @@
 
   - variable declarations
   - conditional checks
-  - break vs. continue
+  - break vs. continue +
   - incorrect casting to Number
 
 */
 
-const userNumber = NaN;
+let userNumber = NaN; // const changed to let
 while (Number.isNaN(userNumber)) {
   const userInput = prompt('enter a number');
 
-  if (userInput === '' && userInput === null) {
+  if (userInput === '' || userInput === null) { // 'and' changed to 'or'
     alert('enter something!');
-    break;
+    continue; // changed break to continue
   }
 
-  userNumber = NaN(userInput);
+  userNumber = Number(userInput); // changed NaN to Number
 
   if (Number.isNaN(userNumber)) {
     alert('"', userInput, '" is not a number');
